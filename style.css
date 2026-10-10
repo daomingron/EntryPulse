@@ -86,7 +86,7 @@
       font-size: 1.5rem;
     }
 
-    .badge-prototype {
+    .badge-status {
       background: rgba(37, 99, 235, 0.08);
       color: #2563EB;
       border: 1px solid rgba(37, 99, 235, 0.2);
@@ -2678,7 +2678,7 @@
         font-size: 1.3rem;
       }
 
-      .badge-prototype {
+      .badge-status {
         font-size: 0.65rem;
         padding: 2px 6px;
       }
@@ -2850,7 +2850,7 @@
         white-space: nowrap;
       }
 
-      .brand-logo .badge-prototype {
+      .brand-logo .badge-status {
         display: none;
       }
 

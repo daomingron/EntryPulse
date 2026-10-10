@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>EntryPulse / SeatLock 360 DBMS — Event Admission & Pessimistic Locking Prototype</title>
+  <title>EntryPulse / SeatLock 360 DBMS — Event Admission & Pessimistic Locking</title>
 
   <!-- Font Awesome & Google Fonts -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
@@ -205,7 +205,7 @@
       <a href="#" class="brand-logo" onclick="switchView('events')">
         <i class="fa-solid fa-layer-group"></i>
         <span>EntryPulse <span style="font-weight: 300; font-size: 0.9rem; color: var(--text-muted);">/ SeatLock 360</span></span>
-        <span class="badge-prototype">DBMS Prototype v1.2</span>
+        <span class="badge-status">DBMS v1.2</span>
       </a>
 
       <!-- Hold Lock Status Banner (PDF Specification) -->
@@ -494,7 +494,7 @@
               <h2 id="stadiumEventTitle">THE ERAS TOUR - TAYLOR SWIFT</h2>
               <p id="stadiumEventSubtitle"><i class="fa-solid fa-location-dot"></i> Philippine Stadium, Bulacan &nbsp;|&nbsp; <i class="fa-solid fa-calendar"></i> Dec 12, 2026 • 8:00 PM</p>
             </div>
-            <span class="badge-prototype" id="stadiumCapacityBadge">Capacity: 20,000</span>
+            <span class="badge-status" id="stadiumCapacityBadge">Capacity: 20,000</span>
           </div>
 
           <!-- Seat Legend -->
@@ -512,7 +512,7 @@
             </div>
           </div>
 
-          <!-- Stadium Sections (Mapped directly from PDF ASCII interface prototype) -->
+          <!-- Stadium Sections (Mapped directly from the reference ASCII layout) -->
           <div class="stadium-sections-grid">
             <!-- VIP A -->
             <div class="section-block">
@@ -523,7 +523,7 @@
               <div class="seat-grid-mini" id="grid-VIP-A"></div>
             </div>
 
-            <!-- VIP B (Selected in PDF Prototype) -->
+            <!-- VIP B (Selected from the reference layout) -->
             <div class="section-block">
               <div class="section-block-header">
                 <span class="section-block-title"><i class="fa-solid fa-crown" style="color: #D97706;"></i> VIP B (Floor Soundboard)</span>
@@ -594,7 +594,7 @@
           </div>
         </div>
 
-        <!-- Checkout & Locking Sidebar (From PDF Prototype) -->
+        <!-- Checkout & Locking Sidebar (From the reference layout) -->
         <div class="checkout-sidebar">
           <div>
             <div class="checkout-header">
@@ -757,7 +757,7 @@
 
           <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px dashed var(--border-color); padding-bottom: 0.75rem;">
             <div>
-              <span class="badge-prototype" style="background: rgba(5, 150, 105, 0.1); color: #059669; border-color: #059669;">CONFIRMED ADMISSION</span>
+              <span class="badge-status" style="background: rgba(5, 150, 105, 0.1); color: #059669; border-color: #059669;">CONFIRMED ADMISSION</span>
               <h3 id="ticketCardTitle" style="margin-top: 0.5rem; font-size: 1.15rem;">Taylor Swift | The Eras Tour</h3>
             </div>
             <i class="fa-solid fa-ticket" style="font-size: 2rem; color: #2563EB;"></i>
@@ -852,7 +852,7 @@
           FlexiPass: Multi-Day & Multi-Venue Access Control
         </div>
         <div style="display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap;">
-          <span class="badge-prototype">Nested Relational Permissions</span>
+          <span class="badge-status">Nested Relational Permissions</span>
           <button class="sim-btn" onclick="switchView('history')" title="View my purchases & request a refund">
             <i class="fa-solid fa-receipt"></i> My Purchases &amp; Refunds
           </button>
@@ -1537,7 +1537,7 @@
   <!-- Notification Toasts -->
   <div class="toast-container" id="toastContainer"></div>
 
-  <!-- JavaScript Prototype Engine -->
+  <!-- JavaScript Application Engine -->
   <script src="script.js"></script>
 </body>
 </html>

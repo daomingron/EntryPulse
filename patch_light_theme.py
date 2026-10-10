@@ -1,7 +1,7 @@
 """Light-theme conversion patch for index.html"""
 import re
 
-PATH = r"C:\Users\Ruellyn Viola\.claude\Sir Law DBMS prototype\index.html"
+PATH = r"C:\Users\Ronnie\.claude\Sir Law DBMS\main project file with database file\index.html"
 
 with open(PATH, "r", encoding="utf-8") as f:
     src = f.read()
@@ -313,7 +313,7 @@ src = src.replace(
     "      box-shadow: 0 2px 10px rgba(37, 99, 235, 0.08);"
 )
 
-# ── 31. Badge prototype (spec-item icon) ──
+# ── 31. Badge status (spec-item icon) ──
 src = src.replace(
     "      background: rgba(59, 130, 246, 0.15);\n"
     "      color: #60A5FA;\n"
@@ -911,7 +911,7 @@ src = src.replace(
     "      font-size: 24px;"
 )
 
-# ── 96. Inline event badge prototype ──
+# ── 96. Inline event badge status ──
 src = src.replace(
     'color: #60A5FA;',
     'color: #2563EB;'
