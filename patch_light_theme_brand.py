@@ -1,5 +1,5 @@
 """Follow-up: scope white text inside the blue login brand panel."""
-PATH = r"C:\Users\Ronnie\.claude\Sir Law DBMS\main project file with database file\index.html"
+PATH = r"C:\Users\Ronnie\.claude\Sir Law\main project file with database file\index.html"
 
 with open(PATH, "r", encoding="utf-8") as f:
     src = f.read()

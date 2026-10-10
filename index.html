@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>EntryPulse / SeatLock 360 DBMS — Event Admission & Pessimistic Locking</title>
+  <title>EntryPulse / SeatLock 360 — Event Admission & Pessimistic Locking</title>
 
   <!-- Font Awesome & Google Fonts -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
-  <!-- QRCode.js Library CDN for GatePass DBMS -->
+  <!-- QRCode.js Library CDN -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 
   <link rel="stylesheet" href="style.css" />
@@ -25,7 +25,7 @@
       <div class="login-brand-panel">
         <div class="brand-logo-big">
           <div class="brand-icon"><i class="fa-solid fa-layer-group"></i></div>
-          <h2>EntryPulse<span>SeatLock 360 DBMS</span></h2>
+          <h2>EntryPulse<span>SeatLock 360</span></h2>
         </div>
         <div class="brand-features">
           <div class="brand-feature-item">
@@ -58,7 +58,7 @@
           </div>
         </div>
         <div class="brand-db-badge">
-          <span class="domain2-label-login"><code>Domain 2:</code> Ticket Sales &amp; Event Reservations DBMS<br></span>
+          <span class="domain2-label-login"><code>Domain 2:</code> Ticket Sales &amp; Event Reservations<br></span>
           16 Concerts &middot; 9 Philippine Venues &middot; 6 Stadium Sections
         </div>
       </div>
@@ -205,7 +205,7 @@
       <a href="#" class="brand-logo" onclick="switchView('events')">
         <i class="fa-solid fa-layer-group"></i>
         <span>EntryPulse <span style="font-weight: 300; font-size: 0.9rem; color: var(--text-muted);">/ SeatLock 360</span></span>
-        <span class="badge-status">DBMS v1.2</span>
+        <span class="badge-status">v1.2</span>
       </a>
 
       <!-- Hold Lock Status Banner (PDF Specification) -->
@@ -234,7 +234,7 @@
         <button class="nav-btn consumer-tab" onclick="switchView('history')">
           <i class="fa-solid fa-receipt"></i> Purchase History
         </button>
-        <button class="nav-btn" onclick="switchView('dbms')" id="sqlInspectorNavBtn">
+        <button class="nav-btn" onclick="switchView('inspector')" id="sqlInspectorNavBtn">
           <i class="fa-solid fa-database"></i> System Logs
         </button>
         <button class="nav-btn admin-tab" onclick="switchView('admin')" style="display:none" id="adminNavBtn">
@@ -296,7 +296,7 @@
     <div class="system-hero">
       <div class="hero-title">
         <i class="fa-solid fa-server" style="color: #2563EB;"></i>
-        <span class="domain2-label-hero">Domain 2: Ticket Sales &amp; Event Reservations DBMS</span>
+        <span class="domain2-label-hero">Domain 2: Ticket Sales &amp; Event Reservations</span>
         <span class="hero-sub-brand">Ticket Sales &amp; Event Reservations</span>
       </div>
       <p class="hero-subtitle">
@@ -314,7 +314,7 @@
         <div class="spec-item">
           <div class="spec-icon"><i class="fa-solid fa-shield-halved"></i></div>
           <div class="spec-text">
-            <h4>GatePass DBMS</h4>
+            <h4>GatePass System</h4>
             <p>Offline-first turnstile scanner with anti-replay cryptographic validation logs.</p>
           </div>
         </div>
@@ -731,7 +731,7 @@
     </section>
 
     <!-- ============================================================== -->
-    <!-- VIEW 3: GATEPASS DBMS (OFFLINE-FIRST TURNSTILE VALIDATOR)     -->
+    <!-- VIEW 3: GATEPASS SYSTEM (OFFLINE-FIRST TURNSTILE VALIDATOR)   -->
     <!-- ============================================================== -->
     <section id="view-gatepass" class="view-section">
       <div class="section-header">
@@ -1116,20 +1116,20 @@
         <button class="admin-action-btn gold" onclick="adminResetDemo()">
           <i class="fa-solid fa-arrow-rotate-left"></i> Reset Demo Sales
         </button>
-        <button class="admin-action-btn" onclick="switchView('dbms')">
+        <button class="admin-action-btn" onclick="switchView('inspector')">
           <i class="fa-solid fa-terminal"></i> Open SQL Inspector
         </button>
       </div>
     </section>
 
     <!-- ============================================================== -->
-    <!-- VIEW 5: DBMS RELATIONAL INSPECTOR & TRANSACTION LOGS          -->
+    <!-- VIEW 5: SYSTEM INSPECTOR & TRANSACTION LOGS                   -->
     <!-- ============================================================== -->
-    <section id="view-dbms" class="view-section">
+    <section id="view-inspector" class="view-section">
       <div class="section-header">
         <div class="section-title">
           <i class="fa-solid fa-terminal"></i>
-          Relational Database Engine & SQL Transaction Stream
+          System Inspector & Transaction Stream
         </div>
         <div>
           <button class="sim-btn" onclick="clearSqlConsole()">
@@ -1138,7 +1138,7 @@
         </div>
       </div>
 
-      <div class="dbms-inspector">
+      <div class="system-inspector">
         <h4 style="font-size: 0.85rem; margin-bottom: 0.5rem; color: var(--text-muted);">
           LIVE SQL TRANSACTION ENGINE (ISOLATION LEVEL: REPEATABLE READ / PESSIMISTIC LOCKS):
         </h4>

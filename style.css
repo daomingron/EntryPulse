@@ -1401,7 +1401,7 @@
     }
 
     /* ==================================================== */
-    /* GATEPASS DBMS (OFFLINE-FIRST TURNSTILE QR VALIDATOR) */
+    /* GATEPASS SYSTEM (OFFLINE-FIRST TURNSTILE QR VALIDATOR) */
     /* ==================================================== */
     .gatepass-container {
       display: grid;
@@ -1496,9 +1496,9 @@
     }
 
     /* ==================================================== */
-    /* DBMS RELATIONAL INSPECTOR & TRANSACTION LOGS        */
+    /* SYSTEM INSPECTOR & TRANSACTION LOGS                 */
     /* ==================================================== */
-    .dbms-inspector {
+    .system-inspector {
       background: var(--bg-card);
       border: 1px solid var(--border-color);
       border-radius: var(--radius-lg);
@@ -2802,7 +2802,7 @@
       }
     }
 
-    /* Mobile SQL terminal in DBMS inspector */
+    /* Mobile SQL terminal in system inspector */
     @media (max-width: 768px) {
       .sql-terminal {
         font-size: 0.72rem;
@@ -2810,7 +2810,7 @@
         padding: 0.75rem;
       }
 
-      .dbms-inspector {
+      .system-inspector {
         padding: 1.25rem;
       }
     }
@@ -3008,7 +3008,7 @@
       .stadium-container,
       .checkout-sidebar,
       .admin-mode-strip,
-      .dbms-inspector {
+      .system-inspector {
         border-radius: var(--radius-md);
       }
 
@@ -3747,7 +3747,7 @@
       .admin-stat-card,
       .spec-item,
       .db-table,
-      .dbms-inspector {
+      .system-inspector {
         max-width: 100%;
         box-sizing: border-box;
       }

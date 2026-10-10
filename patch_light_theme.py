@@ -1,7 +1,7 @@
 """Light-theme conversion patch for index.html"""
 import re
 
-PATH = r"C:\Users\Ronnie\.claude\Sir Law DBMS\main project file with database file\index.html"
+PATH = r"C:\Users\Ronnie\.claude\Sir Law\main project file with database file\index.html"
 
 with open(PATH, "r", encoding="utf-8") as f:
     src = f.read()
@@ -650,7 +650,7 @@ src = src.replace(
     "color: #059669;\">GRANTED"
 )
 
-# ── 63. DBMS badge icon (server) — already covered by broad replace above, but check ──
+# ── 63. Status badge icon (server) — already covered by broad replace above, but check ──
 
 # ── 64. Footer / bottom info area bg ──
 src = src.replace(
@@ -834,7 +834,7 @@ src = src.replace(
     'color: #059669;">CONFIRMED ADMISSION'
 )
 
-# ── 88. DBMS viewer ──
+# ── 88. System viewer ──
 src = src.replace(
     "      background: var(--bg-main);\n"
     "      border-radius: var(--radius-md);\n"

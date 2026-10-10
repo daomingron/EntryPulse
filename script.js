@@ -256,7 +256,7 @@
     let holdLockInterval = null;
     let isOnlineMode = true;
 
-    // Step-by-step gating state (Events → SeatLock 360 → GatePass DBMS)
+    // Step-by-step gating state (Events → SeatLock 360 → GatePass)
     let hasChosenEvent = false;          // True once user picks an event in Event Catalog
     let hasConfirmedPayment = false;     // True once payment is committed in SeatLock 360
 
@@ -598,8 +598,8 @@
         return;
       }
 
-      // Guard: SQL Inspector (dbms) is developer tooling — admins only
-      if (viewName === 'dbms' && (!currentUser || ACCOUNTS[currentUser].role !== 'admin')) {
+      // Guard: SQL Inspector is developer tooling — admins only
+      if (viewName === 'inspector' && (!currentUser || ACCOUNTS[currentUser].role !== 'admin')) {
         notify('Access denied. SQL Inspector requires admin privileges.', 'error');
         return;
       }
@@ -632,7 +632,7 @@
       if (activeBtn) activeBtn.classList.add('active');
 
       // View-specific initialization and cleanup
-      if (viewName === 'dbms') updateDbViewer();
+      if (viewName === 'inspector') updateDbViewer();
       if (viewName === 'gatepass') updateQrCode();
       if (viewName === 'admin') renderAdminConsole();
 
@@ -686,9 +686,9 @@
       const seatLockUnlocked = s1Done;
       const gatePassUnlocked = s1Done && s2Done;
 
-      const eventTip = 'Step 1: Choose an event in "Events & Benchmark" to unlock SeatLock 360 & GatePass DBMS.';
+      const eventTip = 'Step 1: Choose an event in "Events & Benchmark" to unlock SeatLock 360 & GatePass.';
       const gateTip  = s1Done
-        ? 'Step 2: Confirm your payment in SeatLock 360 to unlock GatePass DBMS.'
+        ? 'Step 2: Confirm your payment in SeatLock 360 to unlock GatePass.'
         : eventTip;
 
       setNavLock('seatlock', seatLockUnlocked, eventTip);
@@ -1315,7 +1315,7 @@
       if (isOnlineMode) {
         icon.className = "fa-solid fa-wifi";
         text.textContent = "Network: Online (Cloud Synced)";
-        notify('Network Online: Offline turnstile logs synced to Central Master DBMS!', 'success');
+        notify('Network Online: Offline turnstile logs synced to the central master system!', 'success');
         logSql(`<span class="sql-comment">-- GatePass Sync: Flushed offline buffer to central postgres master</span>`);
       } else {
         icon.className = "fa-solid fa-plane";
@@ -1732,7 +1732,7 @@
     }
 
     /* ========================================================================= */
-    /* 8. DBMS INSPECTOR & SQL CONSOLE HELPER                                    */
+    /* 8. SYSTEM INSPECTOR & SQL CONSOLE HELPER                                  */
     /* ========================================================================= */
     function logSql(htmlString) {
       const term = document.getElementById('sqlTerminal');
@@ -2397,7 +2397,7 @@
       document.getElementById('paymentMethodSection').style.display = 'none';
       document.getElementById('confirmPaySection').style.display = 'none';
 
-      logSql(`<span class="sql-keyword">-- ENTRYPULSE / SEATLOCK 360 DBMS KERNEL INITIALIZED</span>`);
+      logSql(`<span class="sql-keyword">-- ENTRYPULSE / SEATLOCK 360 SYSTEM KERNEL INITIALIZED</span>`);
       logSql(`<span class="sql-keyword">SET TRANSACTION ISOLATION LEVEL REPEATABLE READ</span>;`);
       logSql(`<span class="sql-comment">-- Database schema loaded: 16 concerts, 9 venues, 6 stadium sections</span>`);
     });

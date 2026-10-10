@@ -87,7 +87,7 @@ body.admin-user-view .queue-admin-controls { display: block; }
 4. Standard user experience throughout
 
 ## Files Modified
-- `/media/dwight/Windows_10_Ent-S/Users/Ronnie/.claude/Sir Law DBMS/main project file with database file/index ticket sale.html`
+- `/media/dwight/Windows_10_Ent-S/Users/Ronnie/.claude/Sir Law/main project file with database file/index ticket sale.html`
 
 ## Testing Checklist
 - [ ] Admin can see "User View" button after login (next to Dashboard)
